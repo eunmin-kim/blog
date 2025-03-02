@@ -25,11 +25,11 @@ def add_blog_post(file_path: str, /, *, file_name):
     /blog에 .md나 .ipynb 파일을 추가한다.
     """
     make_file = file_path+file_name
-    # print(file_name)
+    print(file_name)
     try:
-        with open(make_file,"x",encoding='utf-8') as w_file:
+        with open(make_file,"w",encoding='utf-8') as w_file:
             md_content = """
-            # 제목
+            
             """
             w_file.write(md_content)
     except Exception as e:
@@ -39,7 +39,7 @@ def add_blog_post(file_path: str, /, *, file_name):
 
 def get_user_inputs() -> tuple[str, str, str, str, str]:
     today = cur_date.today().strftime("%Y%m%d")
-    date = input(f"날짜: 오늘 날짜는 {today}").strip()
+    date = input(f"날짜: 오늘 날짜는 {today} : ").strip()
     title = input("제목: ").strip()
     tag = input("태그: ").strip()
     thumbnail = input("썸네일 주소 (없을 경우 default.png): ").strip()
@@ -66,7 +66,8 @@ def start():
     else:
         print("입력된 파일 유형이 올바르지 않습니다.")
         exit()
-    add_blog_post("/blog/",file_name=filename)
+
+    add_blog_post("./blog/",file_name=filename)
 
 
 if __name__ == '__main__':
