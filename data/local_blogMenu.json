@@ -8,6 +8,10 @@
         "download_url": "/menu/blog.md"
     },
     {
+        "name": "TIL.md",
+        "download_url": "/menu/TIL.md"
+    },
+    {
         "name": "contact.md",
         "download_url": "/menu/contact.md"
     }
