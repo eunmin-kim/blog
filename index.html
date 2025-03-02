@@ -68,7 +68,7 @@
           id="blog-title"
           class="md:text-2xl text-lg leading-6 mr-auto font-semibold text-gray-900 cursor-pointer"
         >
-          WENIVLOG
+
         </h1>
         <!-- // 블로그 제목 영역 -->
 
@@ -171,5 +171,14 @@
 
     <!-- registry -->
     <script src="js/registry.js"></script>
+
+    <script type="text/javascript">
+      const logo = document.getElementById("blog-title");
+      window.addEventListener("click", (event) => {
+        if (event.target === logo) {
+          window.location.href = "/";
+        }
+      });
+    </script>
   </body>
 </html>
